@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct Search: View {
+    @State private var searchText: String = ""
+    @State private var videos: [VideoScreen] = []
+    
+    var filteredVideos: [VideoScreen] {
+        if searchText.isEmpty {
+            return videos
+        } else {
+            return videos.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
+        }
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            List(filteredVideos) { video in
+                VideoScreenView()
+            }
+            .searchable(text: $searchText, prompt: "Search")
+        }
+        .onAppear {
+            if let loadedVideo = VideoDataManager.VideoLoader() {
+                videos = loadedVideo
+            }
+        }
     }
 }
 

@@ -7,12 +7,35 @@
 
 import SwiftUI
 
-struct Home: View {
+struct Home: View {    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                HStack(spacing: 195) {
+                    Text("For You")
+                        .font(.title)
+                        .foregroundColor(.yellow)
+                    
+                    NavigationLink(destination: Search()) {
+                        Image(systemName: "magnifyingglass")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                            .foregroundColor(.white)
+                    }
+                }
+                
+                Spacer()
+                
+                VideoScreenStatsView()
+                    .frame(width: 360, height: 650 ,alignment: .trailing)
+                TabBarView()
+            }
+        }
     }
 }
 
-#Preview {
-    Home()
+struct Home_Previews: PreviewProvider {
+    static var previews: some View {
+        Home()
+    }
 }

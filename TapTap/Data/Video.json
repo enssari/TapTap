@@ -1,8 +1,12 @@
-//
-//  Video.json
-//  TapTap
-//
-//  Created by Enes Sarı on 8/30/24.
-//
-
-import Foundation
+[
+ {
+     "video": "https://media.istockphoto.com/id/528460032/tr/video/alt%C4%B1n-yaz-g%C3%BCn-bat%C4%B1m%C4%B1nda-bo%C5%9F-%C3%BClke-yolda-araba-siyah-suv-araba.mp4?s=mp4-640x640-is&k=20&c=YYe0hRLkFWgp3qwEdXyR5LBra_qcm1bIoY564AhpuFI=",
+     "likes": 500,
+     "comments": 300,
+     "shares": 150,
+     "title": "Car Driving Against a Beautiful View",
+     "userImage": "https://a-z-animals.com/media/2018/09/Frog-tree.jpg",
+     "description": "A lovely video which shows a car riding with a beautiful view.",
+     "song": "Evergreen - Richy Mitch & The Coal Miners"
+ },
+]

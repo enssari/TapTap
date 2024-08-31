@@ -1,8 +1,11 @@
-//
-//  User.json
-//  TapTap
-//
-//  Created by Enes Sarı on 8/27/24.
-//
-
-import Foundation
+[
+    {
+        "nickname": "Kaeru",
+        "nametag": "kaerureal",
+        "image": "https://a-z-animals.com/media/2018/09/Frog-tree.jpg",
+        "followings": 1,
+        "followers": 14,
+        "likes": 225,
+        "description": "I Make Edits. Instagram: kaerureal"
+    }
+]
